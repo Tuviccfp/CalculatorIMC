@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import styled from 'styled-components';
 import CampInput from './components/CampInput';
+import Table from './components/Table';
 import Text from './components/Text';
 
 const StyledRoot = styled.div`
@@ -18,6 +19,7 @@ root.render(
     <StyledRoot>
       <Text />
       <CampInput />
+      <Table />
     </StyledRoot>
   </React.StrictMode>
 );

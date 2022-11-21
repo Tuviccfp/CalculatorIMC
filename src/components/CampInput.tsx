@@ -23,6 +23,7 @@ const StyledMedida = styled.fieldset`
     ::-webkit-input-placeholder {
       color: #7c7c8a;
       padding: 5px
+      font-family: 'Inter', sans-serif;
      }
   }
   label {
@@ -42,6 +43,7 @@ const StyledMedida = styled.fieldset`
     position: relative;
     right: 56px;
     margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
     &:hover {
       background-color: #9be1fb;
       transition: 0.5s;
@@ -49,14 +51,16 @@ const StyledMedida = styled.fieldset`
   }
 `
 export default function CampInput() {
-
+  const [peso, setPeso] = React.useState('');
+  const [altura, setAltura] = React.useState('');
+  
   return (
     <StyledMedida>
       <label className='label-pound'>Peso: (ex.: 69,2)</label>
       <input type='number' onWheel={(e) => e.currentTarget.blur()} placeholder='Informe seu peso' />
       <label>Altura: (ex.: 1,70)</label>
       <input type="number" placeholder='Informe a sua altura' />
-      <button>Calcule</button>
+      <button>CALCULE</button>
     </StyledMedida>
   );
 }
