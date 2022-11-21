@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import styled from 'styled-components';
+import CampInput from './components/CampInput';
+import Text from './components/Text';
+
+const StyledRoot = styled.div`
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+`
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <StyledRoot>
+      <Text />
+      <CampInput />
+    </StyledRoot>
   </React.StrictMode>
 );
 
